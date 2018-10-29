@@ -11,7 +11,6 @@ router.use(bodyParser.json());
 
 /* GET users listing. */
 router.get('/', authenticate.verifyUser, authenticate.verifyAdmin, function(req, res, next) {
-  console.log("list users to come");
   User.find({})  
   .then((users) => {
       res.statusCode = 200;
