@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-//const dishSchema = require('../models/dishes');
 
 var favoriteSchema = new Schema({
 
@@ -16,9 +15,5 @@ var favoriteSchema = new Schema({
 {
     timestamps: true
 });
-
-//var Favorites = mongoose.model('Favorite', favoriteSchema);
-
-//module.exports = Favorites;
 
 module.exports = mongoose.model("Favorite", favoriteSchema);
